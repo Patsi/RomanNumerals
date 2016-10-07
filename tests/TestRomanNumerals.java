@@ -55,6 +55,47 @@ public class TestRomanNumerals
 		 assertEquals(4, romanNumeral.convertToInteger("IV"));
 	}
 	
+	@Test 
+	public void testV() throws RomanNumeralsException
+	{
+		// V should give 5
+		 assertEquals(5, romanNumeral.convertToInteger("V"));
+	}
+
 	
+	@Test 
+	public void testVI() throws RomanNumeralsException
+	{
+		// VI should give 6
+		 assertEquals(6, romanNumeral.convertToInteger("VI"));
+	}
+	
+	@Test 
+	public void testVII() throws RomanNumeralsException
+	{
+		// VII should give 7
+		 assertEquals(7, romanNumeral.convertToInteger("VII"));
+	}
+	
+	@Test 
+	public void testVIII() throws RomanNumeralsException
+	{
+		// VIII should give 8
+		 assertEquals(8, romanNumeral.convertToInteger("VIII"));
+	}
+	
+	@Test (expected = RomanNumeralsException.class)
+	public void testVIIII() throws RomanNumeralsException
+	{
+		// VIIII is not a valid Roman numeral
+		 romanNumeral.convertToInteger("VIIII");	
+	}
+	
+	@Test 
+	public void testIX() throws RomanNumeralsException
+	{
+		// IX should give 9
+		 assertEquals(9, romanNumeral.convertToInteger("IX"));
+	}
 		
 }
